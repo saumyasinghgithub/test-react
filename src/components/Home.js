@@ -12,14 +12,16 @@ const Home = () => {
   const { loading, userInfo, error, success } = useSelector(
     (state) => state.auth
   );
+  
   const dispatch = useDispatch();
 
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
 
   useEffect(() => {
+    console.log(userInfo);
     // redirect authenticated user to profile screen
-    if (userInfo) navigate("/user-profile");
+    if (userInfo) navigate("/products");
     // redirect user to login page if registration was successful
     if (success) navigate("/");
   }, [navigate, userInfo, success]);

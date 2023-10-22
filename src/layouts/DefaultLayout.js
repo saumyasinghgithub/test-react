@@ -2,10 +2,8 @@ import React from "react";
 import { Header } from "../components";
 
 const DefaultLayout = ({ children }) => {  
-  return (
-    <div className="container-fluid"> 
+  return (    
     <Header /> 
-    </div>
   );
 };
 

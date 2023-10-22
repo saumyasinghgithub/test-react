@@ -3,6 +3,13 @@ import Page from './pages';
 
 const CustomRoutes = [
     {
+        path: "/products",
+        secure: false,
+        exact: true,
+        layout: Layout.DefaultLayout,
+        component: Page.Products,
+    },
+    {
         path: "/readls",
         secure: false,
         exact: true,
